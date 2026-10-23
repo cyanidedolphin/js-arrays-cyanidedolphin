@@ -59,7 +59,7 @@ for (let i = 0; i < numbers.length; i++) {
         largest = numbers[i]
     }
 }
-
+ 
 console.log(`Numbers: ${yourString}`)
 console.log(`Sum: ${sum}`)
 console.log(`Average: ${sum / numbers.length}`)
