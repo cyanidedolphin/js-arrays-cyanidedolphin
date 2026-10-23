@@ -13,7 +13,7 @@
 //  WARM-UP: Favorite Colors
 // ============================================
 // Build an array of 3 colors and print each one.
-
+let colors = ['red', 'green', 'blue']
 // STEP 1: Create an array called "colors" with exactly
 //         three strings: "red", "green", "blue"
 //         Use let to declare it.
@@ -24,7 +24,9 @@
 //         "Color: green"
 //         "Color: blue"
 //         Use: console.log("Color: " + colors[i])
-
+for (let i = 0; i < 3; i++) {
+    console.log(`Color: ${colors[i]}`)
+}
 
 // ============================================
 //  MAIN: Number Analyzer
@@ -34,6 +36,34 @@
 
 // STEP 3: Create an empty array called "numbers" using let.
 //         let numbers = [];
+let numbers = []
+for (let i = 0; i < 5; i++) {
+    numbers.push(parseFloat(prompt(`Enter Number ${i+1}`)))
+}
+
+let yourString = ""
+let sum = 0
+let count = 0
+let largest = numbers[0]
+
+for (let i = 0; i < numbers.length; i++) {
+    yourString += numbers[i]
+    sum += numbers[i]
+    if (i < numbers.length - 1) {
+        yourString += ", "
+    }
+    if (numbers[i] % 2 === 0) {
+        count++
+    }
+    if (numbers[i] > largest) {
+        largest = numbers[i]
+    }
+}
+console.log(`Numbers: ${yourString}`)
+console.log(`Sum: ${sum}`)
+console.log(`Average: ${sum / numbers.length}`)
+console.log(`Even count: ${count}`)
+console.log(`Largest: ${largest}`)
 
 // STEP 4: Use a for loop that runs 5 times (i = 0 to 4).
 //         Inside the loop:
